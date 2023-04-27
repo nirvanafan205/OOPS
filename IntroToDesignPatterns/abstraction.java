@@ -32,7 +32,7 @@ public class abstraction
 }
 	/* 
 	   Data abstraction is the process of hiding certain details and showing only essential information to the user.
-	   Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+	   Abstraction can be achieved with either abstract classes or interfaces
 
 	   The abstract keyword is a non-access modifier, used for classes and methods:
 
@@ -40,6 +40,5 @@ public class abstraction
 
 	   Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
 
-	   An abstract class can have both abstract and regular methods:
-
+	   An abstract class can have both abstract and regular methods
 */
