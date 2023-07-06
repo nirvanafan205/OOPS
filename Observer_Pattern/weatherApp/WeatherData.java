@@ -28,6 +28,7 @@ public class WeatherData implements Subject
         observers.remove(o);
     }
 
+    /* 
     // tells all observers about the state
     // since they all implement update()
     // it's notified
@@ -36,6 +37,17 @@ public class WeatherData implements Subject
         for(Observer observer : observers)
         {
             observer.update(temperature, humidity, pressure);
+        }
+    }
+    */
+
+    // updated version
+    // it is now calling the method with no arguments
+    public void notifyObservers()
+    {
+        for(Observer observer : observers)
+        {
+            observer.update();
         }
     }
 
@@ -52,4 +64,17 @@ public class WeatherData implements Subject
         this.pressure = pressure;
         measurementsChanged();
     }
+
+    public float getTemperature() {
+		return temperature;
+	}
+	
+	public float getHumidity() {
+		return humidity;
+	}
+	
+	public float getPressure() {
+		return pressure;
+	}
+
 }

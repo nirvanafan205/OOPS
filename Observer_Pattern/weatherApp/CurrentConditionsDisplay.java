@@ -14,12 +14,23 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement
         weatherData.registerObserver(this);
     }
 
+    /* 
     // saves the temp and humidty
     // calls display function
     public void update(float temperature, float humidity, float pressure)
     {
         this.temperature = temperature;
         this.humidity = humidity;
+        display();
+    }
+    */
+
+    // updated version
+    // gets weather data from the Subject
+    public void update()
+    {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
     }
 
